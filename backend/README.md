@@ -9,7 +9,8 @@ Make sure you have the following installed on your machine:
 - Node.js (>=14.x)
 - npm (>=6.x)
 - Docker and Docker Compose (if running with Docker)
-- PostgreSQL (if running locally without Docker)
+
+ Must sure that you have account on Mongodb
 
 ## Installation
 
@@ -41,16 +42,11 @@ Make sure you have the following installed on your machine:
 3. The application will be available at `http://localhost:5000`.
 
 ### Running Locally
-
-1. Ensure PostgreSQL is running and create a database named `taskmanager`.
-2. Create a `.env.development` file in the `backend` directory with the following content:
+2. Edit `.env.development` file in the `backend` directory with the following content:
 
     ```env
-    DATABASE_HOST=localhost
-    DATABASE_PORT=5432
-    DATABASE_USER=yourusername
-    DATABASE_PASSWORD=yourpassword
-    DATABASE_NAME=taskmanager
+    DB=mongodb+srv://<username>:<password>@cluster0.icksiwa.mongodb.net/taskmanage?retryWrites=true&w=majority&appName=Cluster0
+    PORT=5001
     ```
 
 3. Start the NestJS application:
@@ -59,7 +55,7 @@ Make sure you have the following installed on your machine:
     npm run start:dev
     ```
 
-4. The application will be available at `http://localhost:5000`.
+4. The application will be available at `http://localhost:5001`.
 
 ## Running Tests
 
