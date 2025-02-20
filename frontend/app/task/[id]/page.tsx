@@ -52,7 +52,7 @@ const TaskDetail = () => {
   
           <p className="text-lg">
             <strong className="text-gray-400">Status:</strong>{" "}
-            <span className={`px-3 py-1 rounded-lg ${task.status === "DONE" ? "bg-green-600 text-white" : "bg-yellow-500 text-white"}`}>
+            <span className={`px-3 py-1 rounded-lg ${task.status === "COMPLETED" ? "bg-green-600 text-white" : "bg-yellow-500 text-white"}`}>
               {task.status}
             </span>
           </p>

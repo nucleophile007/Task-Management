@@ -12,13 +12,13 @@ interface TaskItemProps {
 }
 
 const TaskItem: React.FC<TaskItemProps> = ({ task, index, currentPage, tasksPerPage, handleDelete }) => {
-  const getStatusColorClass = (status: 'PENDING' | 'IN_PROGRESS' | 'DONE') => {
+  const getStatusColorClass = (status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED') => {
     switch (status) {
       case 'PENDING':
         return 'bg-yellow-500';
       case 'IN_PROGRESS':
         return 'bg-blue-500';
-      case 'DONE':
+      case 'COMPLETED':
         return 'bg-green-500';
       default:
         return 'bg-gray-500';

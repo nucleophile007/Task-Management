@@ -6,9 +6,9 @@ interface TaskFormProps {
   initialData: {
     title: string;
     description: string;
-    status: 'PENDING' | 'IN_PROGRESS' | 'DONE';
+    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED';
   };
-  onSubmit: (task: { title: string; description: string; status: 'PENDING' | 'IN_PROGRESS' | 'DONE' }) => void;
+  onSubmit: (task: { title: string; description: string; status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' }) => void;
   buttonText: string;
 }
 
@@ -53,12 +53,12 @@ const TaskForm: React.FC<TaskFormProps> = ({ initialData, onSubmit, buttonText }
         <select
           id="status"
           value={status}
-          onChange={(e) => setStatus(e.target.value as 'PENDING' | 'IN_PROGRESS' | 'DONE')}
+          onChange={(e) => setStatus(e.target.value as 'PENDING' | 'IN_PROGRESS' | 'COMPLETED')}
           className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600"
         >
           <option value="PENDING">PENDING</option>
           <option value="IN_PROGRESS">IN_PROGRESS</option>
-          <option value="DONE">DONE</option>
+          <option value="COMPLETED">COMPLETED</option>
         </select>
       </div>
       <Button type="submit" text={buttonText} icon={<FaSave />} />

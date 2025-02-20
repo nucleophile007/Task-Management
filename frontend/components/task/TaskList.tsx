@@ -38,7 +38,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, handleDelete, currentPage, t
   >
     <option value="">All</option>
     <option value="Pending">Pending</option>
-    <option value="Done">Done</option>
+    <option value="COMPLETED">COMPLETED</option>
   </select>
 </div>
     <table className="min-w-full border-collapse">
