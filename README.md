@@ -6,7 +6,6 @@ This project is a Task Management Application, developed using NestJS for the ba
 
 - `backend`: Contains the NestJS backend application
 - `frontend`: Contains the Next.js frontend application
-- `dockerfiles`: Docker configurations for the project
 - `docker-compose.yml`: Docker Compose configuration file
 
 ## Manual Setup
