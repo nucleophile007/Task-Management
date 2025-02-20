@@ -20,7 +20,7 @@ This project is a Task Management Application, developed using NestJS for the ba
    git clone https://github.com/nucleophile007/Task-Management/
    cd Task-Management
    ```
-2. add you database uri in ./backend./env.development
+2. add your database uri in ./backend./env.development
    
 3. **Build the Docker images and start the containers::**
    ```bash
