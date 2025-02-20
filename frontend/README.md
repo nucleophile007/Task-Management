@@ -52,7 +52,7 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/ranizouaoui/Task-Management-App/
+    git clone https://github.com/nucleophile007/Task-Management
     cd task-management-app/frontend
     ```
 
@@ -78,8 +78,7 @@ Make sure you have the following installed on your machine:
 
 ### Running Locally
 
-1. Ensure PostgreSQL is running and create a database named `taskmanager`.
-2. Ensure backend is running.
+1. Ensure backend is running.
 
 3. Start the NestJS application:
 
@@ -114,5 +113,5 @@ Make sure you have the following installed on your machine:
 
 ### Example Environment Files
 
-`.env.development` : NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
-`.env.production` : NEXT_PUBLIC_API_BASE_URL=http://backend:5000
+`.env.development` : NEXT_PUBLIC_API_BASE_URL=http://localhost:5001
+`.env.production` : NEXT_PUBLIC_API_BASE_URL=http://backend:5001
