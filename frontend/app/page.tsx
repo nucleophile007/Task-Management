@@ -22,6 +22,7 @@ const Home = () => {
       try {
         const tasksData = await TaskService.getTasks();
         setTasks(tasksData);
+        console.log("this is tasks data"+tasksData);
       } catch (error) {
         console.error('Failed to fetch tasks:', error);
       } finally {
@@ -70,10 +71,11 @@ const Home = () => {
     utils.book_append_sheet(wb, ws, "Tasks");
     writeFile(wb, "tasks.xlsx");
   }, [tasks]);
-
+  
+  
   // Pagination logic
   const totalPages = Math.ceil(tasks.length / tasksPerPage);
-  const currentTasks = tasks.slice((currentPage - 1) * tasksPerPage, currentPage * tasksPerPage);
+  
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -94,11 +96,11 @@ const Home = () => {
 
 
           <TaskList 
-  tasks={currentTasks} 
-  handleDelete={handleDelete} 
-  currentPage={currentPage} 
-  tasksPerPage={tasksPerPage} 
-/>
+              tasks={tasks} 
+              handleDelete={handleDelete} 
+              currentPage={currentPage} 
+              tasksPerPage={tasksPerPage} 
+            />
 
           {tasks.length > tasksPerPage && (
             <Pagination

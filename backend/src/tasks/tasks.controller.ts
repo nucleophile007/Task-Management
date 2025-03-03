@@ -1,14 +1,17 @@
 import { Controller, Get, Post, Body, Param, Patch, Delete } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { UpdateTaskDto } from './update-task.dto';
+import { CreateTaskDto } from './create-task.dto';
 
 @Controller('tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 
   @Post()
-  async createTask(@Body('title') title: string, @Body('description') description: string) {
-    return this.tasksService.createTask(title, description);
+  async createTask(@Body() createTaskDto: CreateTaskDto) {
+    console.log("Received Data:", createTaskDto); // Logs full object
+    return this.tasksService.createTask(createTaskDto);
+
   }
 
   @Get()

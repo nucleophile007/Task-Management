@@ -20,6 +20,9 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, handleDelete, currentPage, t
       statusFilter === "" || task.status.toLowerCase() === statusFilter.toLowerCase(); // ✅ Case-insensitive comparison
     return matchesSearch && matchesStatus;
   });
+  const currentTasks = filteredTasks.slice((currentPage - 1) * tasksPerPage, currentPage * tasksPerPage);
+  console.log("this is filtered task"+filteredTasks);
+  console.log("this is task"+tasks);
   return (
     <div className="overflow-hidden rounded-xl shadow-md bg-gray-900 text-gray-200">
     <div className="flex justify-between items-center gap-14 mb-4">
@@ -52,8 +55,8 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, handleDelete, currentPage, t
         </tr>
       </thead>
       <tbody>
-          {filteredTasks.length > 0 ? (
-            filteredTasks.map((task, index) => (
+          {currentTasks.length > 0 ? (
+            currentTasks.map((task, index) => (
               <TaskItem
                 key={task._id}
                 task={task}
