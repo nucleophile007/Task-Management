@@ -90,7 +90,7 @@ const Home = () => {
         </div>
       ) : (
         <div className="bg-white shadow-lg rounded-xl overflow-hidden mt-6 w-full max-w-4xl p-6">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-purple-500 py-3 rounded-lg shadow-lg">
   Your Tasks
 </h2>
 

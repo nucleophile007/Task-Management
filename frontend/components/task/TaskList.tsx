@@ -42,13 +42,14 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, handleDelete, currentPage, t
     <option value="">All</option>
     <option value="Pending">Pending</option>
     <option value="COMPLETED">COMPLETED</option>
+    <option value="IN_PROGRESS">IN_PROGRESS</option>
   </select>
 </div>
     <table className="min-w-full border-collapse">
       {/* Table Header */}
       <thead>
         <tr className="bg-gray-800 text-white">
-          <th className="px-6 py-4 text-left text-sm font-semibold uppercase border-b border-gray-700">ID</th>
+          <th className="px-6 py-4 text-left text-sm font-semibold uppercase border-b border-gray-700">Sl. No.</th>
           <th className="px-6 py-4 text-left text-sm font-semibold uppercase border-b border-gray-700">Title</th>
           <th className="px-6 py-4 text-left text-sm font-semibold uppercase border-b border-gray-700">Status</th>
           <th className="px-6 py-4 text-left text-sm font-semibold uppercase border-b border-gray-700">Actions</th>
